@@ -1,6 +1,12 @@
 import React from 'react';
+import NotesContainer from '../containers/NotesContainer';
+import AllNotes from '../containers/AllNotes';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <>
+    <NotesContainer/>
+    <AllNotes/>
+    </>
+  );
 }
-  
