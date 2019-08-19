@@ -16,6 +16,18 @@ export default class AllNotes extends Component {
       });
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if(prevState.notes !== this.state.notes) {
+      getNotes()
+        .then(notes => {
+          this.setState({
+            notes
+          });
+        });
+
+    }
+  }
+
   render() {
     return (
       <Notes notes={this.state.notes}/>

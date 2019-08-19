@@ -5,8 +5,8 @@ function Notes({ notes }) {
   const noteList = notes.map(note => {
     return (
       <li key={note.title + note.body}>
-        {note.title}
-        {note.body}
+        <p>{note.title}</p>
+        <p>{note.body}</p>
       </li>
     );
   });
